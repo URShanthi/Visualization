@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Parallel Coordinates CSV Upload</title>
+    <link rel="stylesheet" type="text/css" href="static/css/parallel.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/ng-grid.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  </head>
+  <body ng-controller="parallelctrl" class="dark">
+  <h4>Players Statistics</h4>
+  <div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+  </div>
+  <div id="wrap" >
+    <div>
+      <input type="file" id="uploader">
+    </div>
+      <h4>Data Grid</h4>
+      <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="static/js/angular.min.js"></script>
+  <!-- <script type="text/javascript" src="static/js/angular-route.min.js"></script> -->
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/ng-grid-2.0.11.min.js"></script>
+  <script type="text/javascript" src="static/js/d3.min.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/par.js"></script>
+</html>

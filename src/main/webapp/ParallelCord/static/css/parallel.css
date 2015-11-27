@@ -1,0 +1,235 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 95%;
+  padding: 10;
+}
+body { 
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 1.4em;
+  background: #f9f9f9;
+  color: #333;
+}
+body.dark {
+  background: #070707;
+  color: #e3e3e3;
+}
+#wrap {
+  padding: 0 3.5%;
+}
+svg {
+  font: 10px Arial;
+}
+canvas, svg {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+#chart {
+  position: relative;
+}
+.brush rect.extent {
+  fill: none;
+  stroke: #666;
+  fill-opacity: .125;
+  shape-rendering: crisp-edges;
+}
+.dark .brush rect.extent {
+  fill: none;
+  stroke: #999;
+}
+.resize rect {
+  fill: none;
+}
+.background {
+  fill: none;
+}
+.dark .background {
+  fill: none;
+}
+.axis g {
+  pointer-events: none;
+}
+.axis line, .axis path {
+  fill: none;
+   stroke: #222; 
+   stroke-width:1;
+  shape-rendering: crispEdges;
+}
+.dark .axis line, .dark .axis path {
+ 	 stroke: #999;  
+  /* stroke: #777; */
+}
+.axis .tick {
+  width: 200px;
+}
+.axis text {
+  fill: #222;
+  text-anchor: right;
+  font-size: 12px;
+  text-shadow: 0 2px 1px #fff, 2px 0 1px #fff, 0 -2px 1px #fff, -2px 0 1px #fff;
+}
+.axis text.label {
+  fill: #333;
+  font-size: 13px;
+  cursor: move;
+}
+.dark .axis text {
+  fill: #f2f2f2;
+  text-shadow: 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+}
+.dark .axis text.label {
+  fill: #ddd;
+}
+.quarter, .third, .half {
+  float: left;
+}
+.quarter {
+  width: 23%;
+  margin: 0 1%;
+}
+.third {
+  width: 15%;
+  margin: 0 1%;
+}
+.two-third {
+  width: 103%;
+  margin: 0 1%;
+  
+}
+.tabview {
+  width: 80%;
+  margin: 0 1%;
+  overflow: auto;
+  height: 250px;
+}
+
+.half {
+  width: 48%;
+  margin: 0 1%;
+}
+h3 {
+  margin: 0.9em 0 0.6em;
+}
+h3 small {
+  color: #888;
+  font-weight: normal;
+}
+p {
+  margin: 0.6em 0;
+}
+small {
+  line-height: 1.2em;
+}
+button[disabled=disabled] {
+  color: #555 !important;
+  opacity: 0.4;
+}
+.dark button[disabled=disabled] {
+  opacity: 0.2;
+}
+button#keep-data,
+button#exclude-data {
+  font-weight:bold
+}
+button#keep-data:hover {
+  color: #080;
+}
+button#exclude-data:hover {
+  color: #900;
+}
+#food-list {
+  width: 100%;
+  height: 250px;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  overflow:scroll;
+}
+table, th, tr, td {
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+#legend {
+  text-align: left;
+  overflow-y: auto;
+  height: 460px;
+  border-left: 1px solid rgba(140,140,140,0.5);
+}
+.row {
+  cursor: pointer;
+  /* text-align:right; */
+}
+.rowtxt {
+    text-align:left;
+}
+.rownum {
+    text-align:right;
+}
+
+.row:hover {
+  background: rgba(160,160,160,0.2);
+}
+.off {
+  color: #999;
+}
+.dark .off {
+  color: #555;
+}
+.dark #legend {
+  border-left: 1px solid #777;
+}
+.color-block, .color-bar {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 1px 4px 1px 0px;
+}
+#rendered-bar,
+#selected-bar {
+  width:0%;
+  font-weight: bold;
+}
+#rendered-bar {
+  background: #888;
+  border-right: 1px solid #666;
+}
+#selected-bar {
+  background: rgba(160,160,160,0.5);
+  border-right: 1px solid #999;
+}
+.fillbar {
+  height: 12px;
+  line-height: 12px;
+  border:1px solid rgba(120,120,120,0.5);
+  max-width: 220px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 12px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 12px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #222;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 100%; 
+    height: 200px;
+    float: left;
+}
